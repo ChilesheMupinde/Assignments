@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "885128084409",
+    "project_id": "assignment-be470",
+    "storage_bucket": "assignment-be470.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885128084409:android:7f032af54a00b8b332d468",
+        "android_client_info": {
+          "package_name": "com.example.assignments"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885128084409-f8k5gmj6ahi9chfv738ek9qq9ej2ln1h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdZ8jxe2oIGzR8GHZQsfveuDHU8yg5GGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885128084409-f8k5gmj6ahi9chfv738ek9qq9ej2ln1h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
