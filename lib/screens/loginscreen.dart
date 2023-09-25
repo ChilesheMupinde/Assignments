@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../common_widgets/input_wiget.dart';
-import '../../constraints/image_strings.dart';
+import 'package:assignments/common_widgets/input_wiget.dart';
+import 'package:assignments/constraints/image_strings.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

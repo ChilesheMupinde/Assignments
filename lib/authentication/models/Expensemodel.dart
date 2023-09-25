@@ -1,46 +1,80 @@
-import 'dart:io';
+import 'package:assignments/authentication/models/model.dart';
 
-import 'package:get/get_connect/http/src/_http/_io/_file_decoder_io.dart';
+class ExpenseModel extends Model {
+  static String table = "expenses";
 
-class Expensemodel {
   int? id;
-  late int amount;
-  DateTime date;
-  File? image;
-  late String category;
-  late String description;
-  late String location;
+  double amount;
+  String date;
+  int? categoryId;
+  String? description;
+  String? location;
 
-  Expensemodel(
+  String? Picture;
+
+  ExpenseModel(
       {this.id,
-      required this.amount,
       required this.date,
-      this.image,
-      required this.category,
-      required this.description,
-      required this.location});
+      required this.categoryId,
+      this.description,
+      required this.amount,
+      this.Picture,
+      this.location});
 
-  Map<String, dynamic> toMap() {
-    return {
-      "id": id,
-      "amount": amount,
-      "category": category,
-      "description": description,
-      "location": location,
-      "date": DateTime.now().toString(),
-      "locarion": location,
-      'image': image == null ? '' : image!.path
+  factory ExpenseModel.fromMap(Map<String, dynamic> json) => ExpenseModel(
+        id: json['id'],
+        amount: json['amount'],
+        date: json['date'],
+        categoryId: json['categoryId'],
+        description: json['description'].toString(),
+        location: json["location"],
+        Picture: json['Picture'],
+      );
+
+  Map<String, dynamic> toJson() {
+    Map<String, dynamic> map = {
+      'id': id,
+      'amount': amount,
+      'date': DateTime.now().toString(),
+      'categoryId': categoryId,
+      'description': description,
+      'location': location,
+      'Picture': Picture
     };
-  }
 
-  factory Expensemodel.fromsnap(Map<String, dynamic> map) {
-    return Expensemodel(
-        id: map['id'],
-        amount: map['amount'],
-        date: map['date'],
-        category: map['category'],
-        description: map['description'],
-        location: map['location'],
-        image: map['image'] != null ? File(map['image']) : null);
+    if (id != null) {
+      map['id'] = id;
+    }
+    return map;
   }
 }
+
+// class CategoryModel extends Model {
+//   static String table = 'product_categories';
+
+//   String categoryName;
+//   int categoryId;
+
+//   CategoryModel({
+//     required this.categoryId,
+//     required this.categoryName,
+//   });
+
+//   static CategoryModel fromMap(Map<String, dynamic> map) {
+//     return CategoryModel(
+//       categoryId: map["id"],
+//       categoryName: map['categoryName'],
+//     );
+//   }
+
+//   Map<String, dynamic> toMap() {
+//     Map<String, dynamic> map = {
+//       'categoryName': categoryName,
+//     };
+
+//     if (id != null) {
+//       map['id'] = id;
+//     }
+//     return map;
+//   }
+// }

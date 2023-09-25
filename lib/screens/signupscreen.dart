@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 
 import '../../common_widgets/input_wiget.dart';
 import '../../constraints/image_strings.dart';
-import '../controllers/SIgnupController.dart';
-import '../models/Usermodel.dart';
+import 'package:assignments/authentication/controllers/SIgnupController.dart';
+import 'package:assignments/authentication/models/Usermodel.dart';
 
 class Signupscreen extends StatelessWidget {
   const Signupscreen({super.key});

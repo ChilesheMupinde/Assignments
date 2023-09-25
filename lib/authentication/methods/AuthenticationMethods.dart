@@ -1,9 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
-import 'package:assignments/authentication/screens/Homescreen.dart';
-import 'package:assignments/authentication/screens/loginscreen.dart';
-import 'package:assignments/authentication/screens/signupscreen.dart';
+import 'package:assignments/screens/Homescreen.dart';
+import 'package:assignments/screens/loginscreen.dart';
+import 'package:assignments/screens/signupscreen.dart';
 import '../exceptions.dart';
+
 
 class AuthMethods extends GetxController {
   static AuthMethods get instance => Get.find();
